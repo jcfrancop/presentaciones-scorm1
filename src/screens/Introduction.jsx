@@ -15,7 +15,7 @@ export default function Introduction({ setCurrentScreen }) {
         <strong>¿Qué evitas?</strong> Empezar a seleccionar o descartar en esta
         etapa. Primero reúnes, luego filtras.
       </p>
-      <button onClick={() => setCurrentScreen(2)}>Empieza a recopilar</button>
+      <button onClick={() => setCurrentScreen("dragfiles")}>Empieza a recopilar</button>
     </section>
   );
 }

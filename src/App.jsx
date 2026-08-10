@@ -1,18 +1,20 @@
 import { useState } from 'react'
 
 import Welcome from './screens/Welcome'
+import Instructions from './screens/Instructions';
 import Introduction from './screens/Introduction';
 import DragFiles from './screens/dragFiles';
 
 function App() {
 
-  const [currentScreen, setCurrentScreen] =useState(0);
+  const [currentScreen, setCurrentScreen] =useState("welcome");
 
-  const screens = [
-    <Welcome setCurrentScreen={setCurrentScreen}/>,
-    <Introduction setCurrentScreen={setCurrentScreen}/>,
-    <DragFiles setCurrentScreen={setCurrentScreen}/>
-  ]
+  const screens = {
+    welcome:<Welcome setCurrentScreen={setCurrentScreen}/>,
+    before:<Instructions setCurrentScreen={setCurrentScreen}/>,
+    introduction:<Introduction setCurrentScreen={setCurrentScreen}/>,
+    dragfiles:<DragFiles setCurrentScreen={setCurrentScreen}/>
+  }
 
   return (
     screens[currentScreen]  
