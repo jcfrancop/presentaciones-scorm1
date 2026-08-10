@@ -87,12 +87,12 @@ export default function DragFiles({ setCurrentScreen }) {
       </div>
 
       <div className="buttons">
-        <button onClick={() => setCurrentScreen(0)}>
+        <button onClick={() => setCurrentScreen("welcome")}>
           Volver al inicio
         </button>
 
         {completed && (
-          <button onClick={() => setCurrentScreen(3)}>
+          <button onClick={() => setCurrentScreen("question1")}>
             Siguiente
           </button>
         )}
