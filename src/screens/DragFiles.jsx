@@ -40,20 +40,24 @@ export default function DragFiles({ setCurrentScreen }) {
   }
 
   return (
-    <>
-      {!completed ? (
-        <header>
-          <h2>Recopila todo el material</h2>
+    <section className="main-container">
+      <div className="principal-content">
+        <div className="content">
+          {!completed ? (
+        <div>
+          <h1>Recopila todo el material</h1>
           <p>Arrastra cada pieza de información a la caja <strong>FUENTES</strong>.</p>
-        </header>
+        </div>
       ) : (
-        <header>
-          <h2>🎉 ¡Lo has conseguido!</h2>
+        <div>
+          <h1>¡Lo has conseguido!</h1>
           <p>Has reunido todas las fuentes de información.</p>
-        </header>
+        </div>
       )}
+        </div>
 
-      <div className="availableSources">
+      <div className="fonts-container">
+        <div className="availableSources">
         {sources
           .filter((source) => !source.collected)
           .map((source) => (
@@ -79,11 +83,12 @@ export default function DragFiles({ setCurrentScreen }) {
           {sources
             .filter((source) => source.collected)
             .map((source) => (
-              <div key={source.id} className="sourceCard collected">
+              <div key={source.id} className="collected">
                 {source.label}
               </div>
             ))}
         </div>
+      </div>
       </div>
 
       <div className="buttons"> {completed && (
@@ -92,6 +97,7 @@ export default function DragFiles({ setCurrentScreen }) {
           </button>
         )}
       </div>
-    </>
+      </div>
+    </section>
   );
 }

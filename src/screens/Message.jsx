@@ -98,7 +98,7 @@ export default function Message({ setCurrentScreen }) {
         <p>Después de defiir el mensaje, el siguiente paso es definir el <em><b>storyboard</b></em></p>
         <div>
           <button onClick={() => setCurrentScreen("def_story")}>
-            Crea el storyboard
+            Empieza con el Storyboard
           </button>
         </div>
       </div>

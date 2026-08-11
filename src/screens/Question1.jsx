@@ -29,24 +29,35 @@ export default function Question1({ setCurrentScreen }) {
   }
 
   return (
-    <>
-      <h2>{question.text}</h2>
+    <section className="main-container">
+      <div className="principal-content">
+        <div className="content">
+          <h2>{question.text}</h2>
+          <br/>
+          <div className="question-container">
+            <div>
+            {question.options.map((option) => (
+              <button key={option.id} className="q-button" onClick={() => handleAnswer(option)}>
+                {option.text}
+              </button>
+            ))}
+          </div>
+          </div>
 
-      <div>
-        {question.options.map((option) => (
-          <button key={option.id} onClick={() => handleAnswer(option)}>
-            {option.text}
+          <div className="retroalimentation">
+            {selectedAnswer && (
+            <p>
+              {selectedAnswer.correct ? "¡Correcto!" : "Respuesta incorrecta."}
+            </p>
+          )}
+          </div>
+        </div>
+        {selectedAnswer?.correct && (
+          <button onClick={() => setCurrentScreen("notebook")}>
+            Continuar
           </button>
-        ))}
+        )}
       </div>
-
-      {selectedAnswer && (
-        <p>{selectedAnswer.correct ? "¡Correcto!" : "Respuesta incorrecta."}</p>
-      )}
-
-      {selectedAnswer?.correct && (
-        <button onClick={() => setCurrentScreen("notebook")}>Continuar</button>
-      )}
-    </>
+    </section>
   );
 }
