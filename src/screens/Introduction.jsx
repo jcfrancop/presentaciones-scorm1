@@ -1,7 +1,7 @@
 export default function Introduction({ setCurrentScreen }) {
   return (
     <section className="main-container">
-      <h2>El levantamiento de información</h2>
+      <h1>El levantamiento de información</h1>
       <p>
         Antes de escribir una sola palabra en tu presentación, necesitas saber
         qué quieres decir. El levantamiento es la fase de recopilación: juntas

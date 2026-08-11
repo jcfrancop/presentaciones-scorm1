@@ -7,7 +7,7 @@ export default function DragFiles({ setCurrentScreen }) {
     { id: 3, label: "Entrevista", collected: false },
     { id: 4, label: "Podcast", collected: false },
     { id: 5, label: "Video", collected: false },
-    { id: 6, label: "Página web", collected: false },
+    { id: 6, label: "Página web", collected: false }
   ]);
 
   const [dragging, setDragging] = useState(null);
@@ -86,12 +86,7 @@ export default function DragFiles({ setCurrentScreen }) {
         </div>
       </div>
 
-      <div className="buttons">
-        <button onClick={() => setCurrentScreen("welcome")}>
-          Volver al inicio
-        </button>
-
-        {completed && (
+      <div className="buttons"> {completed && (
           <button onClick={() => setCurrentScreen("question1")}>
             Siguiente
           </button>
