@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest
+  identifier="presentaciones-scorm1"
+  version="1.0"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://www.imsproject.org/xsd/imscp_rootv1p1p2
+    http://www.imsglobal.org/xsd/imscp_rootv1p1p2.xsd
+    http://www.adlnet.org/xsd/adlcp_rootv1p2
+    http://www.adlnet.org/xsd/adlcp_rootv1p2.xsd"
+>
+
+  <organizations default="ORG-1">
+
+    <organization identifier="ORG-1">
+
+      <title>Presentaciones - Módulo 2</title>
+
+      <item
+        identifier="ITEM-1"
+        identifierref="RES-1"
+      >
+        <title>Flujo de trabajo</title>
+      </item>
+
+    </organization>
+
+  </organizations>
+
+  <resources>
+
+    <resource
+      identifier="RES-1"
+      type="webcontent"
+      adlcp:scormtype="sco"
+      href="index.html"
+    />
+
+  </resources>
+
+</manifest>
