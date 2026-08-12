@@ -45,7 +45,7 @@ export default function Question3({ setCurrentScreen }) {
           <div className="question-container">
             <div>
               {question.options.map((option) => (
-                <button key={option.id} onClick={() => handleAnswer(option)}>
+                <button key={option.id} className="q-button" onClick={() => handleAnswer(option)}>
                   {option.text}
                 </button>
               ))}

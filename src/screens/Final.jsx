@@ -10,20 +10,22 @@ export default function Final({ setCurrentScreen }) {
 
   return (
     <section className="main-container">
-      <h1>El flujo completo en una mirada</h1>
+      <div className="principal-content">
+        <div className="content">
+          <h1>El flujo completo en una mirada</h1>
 
-      <div className="resume-container">
-        {resume.map((item) => (
-          <span key={item.id}>{item.label}</span>
-        ))}
+          <div className="resume-container">
+            {resume.map((item) => (
+              <span key={item.id}>{item.label}</span>
+            ))}
+          </div>
+
+          <p>
+            En el siguiente recurso vas a aprender a usar Gemini Notebook para
+            hacer la síntesis de múltiples documentos en minutos.
+          </p>
+        </div>
       </div>
-
-      <p>
-        En el siguiente recurso vas a aprender a usar Gemini Notebook para hacer
-        la síntesis de múltiples documentos en minutos.
-      </p>
-
-      <button onClick={() => setCurrentScreen("welcome")}>Siguiente</button>
     </section>
   );
 }

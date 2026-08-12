@@ -20,9 +20,8 @@ export default function Notebook({ setCurrentScreen }) {
   return (
     <section className="main-container">
       <div className="principal-content">
-        <div className="content">
-          <section>
-            <h1>Síntesis con IA: Gemini Notebook</h1>
+          <div className="content">
+            <h2>Síntesis con IA: Gemini Notebook</h2>
             <br/>
             <p>
               Tienes más información de la que puedes procesar manualmente.
@@ -43,12 +42,12 @@ export default function Notebook({ setCurrentScreen }) {
             <p>
               <i>Arrastra la caja de fuentes a Gemini Notebook</i>
             </p>
-          </section>
+          </div>
 
-          <section>
+          <div className="fonts-container">
             {!processing && !sourcesProcessed && (
               <div
-                className="sourcesContainer"
+                className="collectedSources readyToCollect"
                 draggable
                 onDragStart={() => setDragging(true)}
               >
@@ -67,17 +66,15 @@ export default function Notebook({ setCurrentScreen }) {
               {processing && <div>Procesando...</div>}
             </div>
             {sourcesProcessed && (
-              <div className="sourcesSintetized">
-                <h3>Fuentes sintenizadas</h3>
-              </div>
-            )}
-          </section>
-        </div>
-        {sourcesProcessed && (
-          <button onClick={() => setCurrentScreen("question2")}>
+              <div className="sourcesSintetizedContainer">
+                <div>───────►</div>
+                <div className="sourcesSintetized"><h3>Fuentes sintenizadas</h3></div>
+                <button onClick={() => setCurrentScreen("question2")}>
             Siguiente
           </button>
-        )}
+              </div>
+            )}
+          </div>
       </div>
     </section>
   );

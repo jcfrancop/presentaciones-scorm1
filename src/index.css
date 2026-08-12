@@ -28,7 +28,7 @@ main {
   width: 60%;
   height: auto;
   aspect-ratio: 4/3;
-  background-color: #F7F5F5 ;
+  background-color: #F7F5F5;
   border-radius: 25px;
   overflow: hidden;
   display: flex;
@@ -46,7 +46,7 @@ button {
   padding: 14px 24px;
   border-radius: 30px;
   font-family: Roboto, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 12px rgba(1, 62, 125, 0.3);
@@ -90,11 +90,10 @@ button {
 
 .fonts-container {
   width: 100%;
-  height: 40%;
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .availableSources {
@@ -114,6 +113,7 @@ button {
   width: 30%;
   height: 240px;
   background-color: #d0ac81;
+  border: solid 2px #825825;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,7 +122,7 @@ button {
 }
 
 .collected {
-  font-size: 0,5em;
+  font-size: 0, 5em;
 }
 
 .question-container {
@@ -136,13 +136,13 @@ button {
   text-align: center;
   font-size: 0.8rem;
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   background-color: #d5e4fb;
   color: #0b2545;
   margin-bottom: 5px;
 }
 
-.retroalimentation{
+.retroalimentation {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,4 +151,104 @@ button {
   margin: 5px;
   color: #0b2545;
   font-size: 1rem;
+}
+
+.geminiNotebook {
+  min-width: 150px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: solid 2px #3186FF;
+}
+
+.geminiNotebook img {
+  width: 100px;
+  height: auto;
+}
+
+.readyToCollect {
+  height: 150px;
+  width: 20%;
+}
+
+.sourcesSintetizedContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.sourcesSintetized {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: goldenrod;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+}
+
+.cards-container {
+  font-size: 80%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.card-info {
+  background-color: #f6eee3;
+  padding: 2%;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5px;
+  border: solid 2px #e5cbba;
+  font-size: 90%;
+  display: flex;
+  flex-direction: column;
+  gap:2px;
+}
+
+.mes-cont1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.storyBoard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 110%;
+  margin-bottom: 8px;
+}
+
+.slide {
+  background-color: #f1f6fe;
+  border: solid 2px #b1c6e8;
+  font-size: 68%;
+  margin: 0.4em;
+  padding: 1%;
+}
+
+.slide-title {
+  font-size: 110%;
+}
+
+.resume-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 85%;
+  padding: 4% 2%;
+  background-color: #0b2545;
+  color: white;
+  border-radius: 25px;
 }
