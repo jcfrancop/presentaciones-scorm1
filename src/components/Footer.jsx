@@ -11,9 +11,9 @@ export default function Footer() {
         </p>
       </div>
       <div className="logos">
-        <img src="/logo-avaco1%20separador.png" alt="Logo Avaco" />
+        <img src="./logo-avaco1%20separador.png" alt="Logo Avaco" />
 
-        <img src="/logo-unibague_w.png" alt="Logo Universidad de Ibagué" />
+        <img src="./logo-unibague_w.png" alt="Logo Universidad de Ibagué" />
       </div>
     </div>
   );
